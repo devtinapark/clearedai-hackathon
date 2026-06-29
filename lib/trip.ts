@@ -15,7 +15,7 @@ export const SEED_TRIP: Trip = {
     { id: "ride", phase: "depart", icon: "local_taxi", title: "Uber to LAX",
       sub: "Newport Beach → LAX", dur: 70, mode: "ride", tz: TZ.PDT,
       source: "Google Routes", detail: "Live traffic · 2807 Villa Way → LAX", live: true, feed: "traffic",
-      from: { lat: 33.6080, lng: -117.9290 }, to: { lat: 33.9416, lng: -118.4085 } },
+      from: { lat: 33.6189, lng: -117.9298 }, to: { lat: 33.9416, lng: -118.4085 } },
     { id: "curb", phase: "depart", icon: "directions_walk", title: "Curb → check-in",
       sub: "Tom Bradley Intl (Terminal B)", dur: 8, mode: "walk", tz: TZ.PDT,
       source: "LAX map", detail: "Departures level → Korean Air row" },

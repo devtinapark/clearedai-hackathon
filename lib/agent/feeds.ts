@@ -3,10 +3,10 @@
 // (FlightAware for flights, Google Routes for traffic) and falls back to mock.
 //
 // The arc is designed to show the agent's *judgment*:
-//   1. KE012 +95 min  → absorbed by the 15h Seoul layover → arrival UNCHANGED
-//   2. KE863 +50 min  → directly slips arrival              → escalate
-//   3. PEK immigration +20 → slips further                  → major
-//   4. Beijing traffic clears (−30) → partial recovery
+//   1. KE012 +95 min  → absorbed by the 7h20m Seoul layover → arrival UNCHANGED
+//   2. OZ104 +50 min  → directly slips arrival               → escalate
+//   3. NRT immigration +20 → slips further                   → major
+//   4. Tokyo traffic clears (−30) → partial recovery
 
 import type { FeedId, FeedReading, Overrides, Trip } from "../types";
 

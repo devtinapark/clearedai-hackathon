@@ -10,8 +10,8 @@ Built for the Google I/O Innovation Lab Hackathon. Next.js on Vercel, local-firs
 
 ## The example trip
 
-**LAX → (KE012, A380) → Seoul Incheon → 15h layover → (KE863, A330) → Beijing PEK.**
-Three timezones (PDT / KST / CST), three calendar days, across the date line.
+**LAX → (KE012, A380) → Seoul Incheon → 7h20m layover → (OZ104, A321-neo) → Tokyo Narita NRT.**
+Three timezones (PDT / KST / JST), three calendar days, across the date line.
 **ETA-only** — there's no hard meeting deadline; the verdict is your live arrival
 time and how far it has slipped from the original plan.
 
@@ -41,8 +41,8 @@ Client (local-first)              POST /api/agent/tick
 
 ```bash
 npm install
-cp .env.local.example .env.local   # add your keys (all optional)
-npm run dev                        # http://localhost:3000
+cp .env.example .env.local   # add your keys (all optional)
+npm run dev                  # http://localhost:3000
 ```
 
 The app **runs with no keys** — a deterministic mock agent + a scripted
@@ -59,10 +59,10 @@ disruption arc keep the demo reliable. Add keys to go live:
 On the **Live** tab, hit **Run agent tick** to watch Gemma sweep the feeds and
 react. The scripted 4-beat arc (slip vs plan in parentheses):
 
-1. **KE012 +95 min** → *absorbed by the 15h Seoul layover* → arrival unchanged `(+0)`
-2. **KE863 +50 min** → directly slips arrival `(+50)`
-3. **PEK immigration +20** → slips further `(+70)`
-4. **Beijing traffic clears −30** → partial recovery `(+40)`
+1. **KE012 +95 min** → *absorbed by the 7h20m Seoul layover* → arrival unchanged `(+0)`
+2. **OZ104 +50 min** → directly slips arrival `(+50)`
+3. **NRT immigration +20** → slips further `(+70)`
+4. **Tokyo traffic clears −30** → partial recovery `(+40)`
 
 Beat 1 is the showcase: the agent recognizes a 95-minute delay it doesn't need to
 bother you about.
@@ -78,7 +78,7 @@ components/
   screens/              Today / Timeline / Live
 lib/
   schedule.ts           absolute-time, multi-flight door-to-door engine
-  trip.ts               seed itinerary (LAX → ICN → PEK)
+  trip.ts               seed itinerary (LAX → ICN → NRT)
   types.ts              shared domain types
   agent/
     orchestrator.ts     Router → Analyst → Comm pipeline (+ mock fallback)

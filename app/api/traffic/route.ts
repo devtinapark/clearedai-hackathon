@@ -23,7 +23,7 @@ export async function GET() {
         "X-Goog-FieldMask": "routes.duration",
       },
       body: JSON.stringify({
-        origin: { address: "2807 Villa Way, Newport Beach, CA 92663" },
+        origin: { location: { latLng: { latitude: 33.6189, longitude: -117.9298 } } },
         destination: { location: { latLng: { latitude: 33.9416, longitude: -118.4085 } } },
         travelMode: "DRIVE",
         routingPreference: "TRAFFIC_AWARE",

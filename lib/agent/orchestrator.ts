@@ -1,8 +1,8 @@
 // orchestrator.ts — multi-agent hub & spoke (Router → Analyst → Comm) from the
 // pitch deck, reframed for ETA tracking (no hard deadline). The schedule MATH is
 // deterministic (computeSchedule); the agents do triage, interpretation, comms.
-// A key judgment they surface: a delay the 15h layover absorbs vs one that slips
-// arrival. With no OPENROUTER_API_KEY, a deterministic fallback matches the shape.
+// A key judgment they surface: a delay the 7h20m Seoul layover absorbs vs one that
+// slips arrival. With no OPENROUTER_API_KEY, a deterministic fallback matches the shape.
 
 import type {
   Trip,
